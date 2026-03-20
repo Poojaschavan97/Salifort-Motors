@@ -1,135 +1,57 @@
-# Salifort Motors – Employee Attrition Analysis & Prediction
+Salifort Motors — Employee Attrition Analysis & Prediction
+Python • Pandas • Scikit-learn • Matplotlib • Seaborn
+An end-to-end HR analytics project — identifying the key drivers of employee attrition and building a predictive model to help HR teams make data-driven retention decisions.
 
-## 🧩 Problem Statement
+The Problem
+High employee attrition costs organisations significantly in hiring, onboarding, and lost productivity. Salifort Motors needed to understand why employees were leaving and who was most at risk — before they resigned.
 
-Salifort Motors aims to understand the key factors contributing to employee attrition and develop a predictive system to identify employees at risk of leaving the organization.
+Results
+MetricRandom ForestLogistic RegressionAccuracy~0.98BaselineF1-Score~0.95—Dataset size15,000+ HR records—Class imbalance handledYes — class_weightYes
+Top attrition drivers identified:
 
-High attrition impacts productivity, increases hiring costs, and affects organizational stability. The goal of this project is to analyze workforce data and build a machine learning model that helps HR make data-driven retention decisions.
+Workload imbalance was the strongest predictor of employee churn
+Low job satisfaction combined with no promotion in 3+ years nearly doubled attrition risk
+Salary band was a significant retention factor, particularly at mid-tenure (3–5 years)
 
----
 
-## 📌 Project Overview
+Project Workflow
+Raw HR Data → Cleaning & Deduplication → EDA → Feature Engineering → Modelling → Business Recommendations
+Data Preprocessing
 
-This project performs an end-to-end HR analytics workflow:
+Removed duplicates and handled missing values across 15,000+ records
+Encoded categorical variables, scaled numerical features
+Addressed class imbalance using Scikit-learn class_weight
 
-- Data Cleaning & Preprocessing  
-- Exploratory Data Analysis (EDA)  
-- Feature Engineering  
-- Machine Learning Model Development  
-- Model Evaluation  
-- Business Insight Generation  
+Exploratory Data Analysis
 
-The objective is to identify patterns driving employee turnover and create a predictive model to estimate attrition risk.
+Identified workload and satisfaction as primary attrition drivers
+Visualised relationships between tenure, salary, promotion history, and turnover
+Statistical interpretation of feature distributions and correlations
 
----
+Feature Engineering
 
-## 📊 Dataset Overview
+Created meaningful derived features from existing HR attributes
+Reduced multicollinearity before model training
+Selected predictors based on feature importance scores
 
-The dataset contains employee-level HR information such as:
+Machine Learning
 
-- Workload and satisfaction metrics  
-- Tenure  
-- Promotion history  
-- Salary level  
-- Performance evaluation  
-- Department information  
+Built and compared Logistic Regression and Random Forest classifiers
+Evaluated using Accuracy, Precision, Recall, F1-Score, ROC-AUC, and Confusion Matrix
+Random Forest selected as final model based on F1-score performance
 
-Duplicates were removed and missing values handled before analysis.
 
----
+Key Business Recommendations
 
-## 🔍 Key Activities Performed
+Flag employees with high workload + low satisfaction scores for proactive manager check-ins
+Implement a structured promotion review cycle for employees past the 3-year mark
+Reassess salary bands at the mid-tenure stage — this is the highest-risk attrition window
+Build an internal early-warning dashboard tracking these 3 signals monthly
 
-### 1️⃣ Data Preprocessing
-- Removed duplicates
-- Handled missing values
-- Encoded categorical variables
-- Scaled numerical features
-- Addressed class imbalance
 
----
+Tech Stack
+LayerToolsData processingPython, Pandas, NumPyVisualisationMatplotlib, SeabornML modelsScikit-learn (Random Forest, Logistic Regression)EnvironmentJupyter Notebook
 
-### 2️⃣ Exploratory Data Analysis
 
-- Identified key attrition drivers
-- Analyzed relationships between satisfaction, workload, salary, and turnover
-- Visualized trends using Matplotlib and Seaborn
-- Performed statistical interpretation
-
----
-
-### 3️⃣ Feature Engineering
-
-- Created meaningful derived features
-- Reduced multicollinearity
-- Selected relevant predictors for modeling
-
----
-
-### 4️⃣ Machine Learning Models
-
-Built and evaluated classification models:
-
-- Logistic Regression (with class_weight balancing)
-- Random Forest Classifier
-
----
-
-## 📈 Model Performance
-
-Evaluation metrics used:
-
-- Accuracy
-- Precision
-- Recall
-- F1 Score
-- ROC-AUC
-- Confusion Matrix
-
-The Random Forest model achieved high performance, demonstrating strong predictive capability for employee attrition.
-
----
-
-## 💡 Key Business Insights
-
-- Workload imbalance strongly influences attrition
-- Low job satisfaction significantly increases churn risk
-- Lack of promotion over time correlates with higher turnover
-- Salary bands impact retention probability
-
-Actionable recommendations were provided to improve retention strategy.
-
----
-
-## 🛠 Tech Stack
-
-- Python  
-- Pandas  
-- NumPy  
-- Scikit-learn  
-- Matplotlib  
-- Seaborn  
-- Jupyter Notebook  
-
----
-
-## 📦 Deliverables
-
-- Cleaned & processed dataset  
-- Exploratory data analysis notebook  
-- Machine learning models  
-- Model evaluation metrics  
-- Business recommendations report  
-
----
-
-Contact me 
-
-Email_id: poojachavan.0109@gmail.com
-
-phone number: 8007654382
-
-by DataTinker
-## 🧠 Domain
-
-HR Analytics | Predictive Modeling | Machine Learning | Data-Driven Decision Making
+About
+Built by Pooja Chavan — Data Analyst | M.Sc. Mathematics (CGPA 9.75)
